@@ -1,0 +1,5 @@
+numpy>=1.21.0
+trimesh>=3.15.0
+matplotlib>=3.5.0
+# open3d>=0.15.0  # Optional - not required as we use matplotlib for visualization (works in headless environments)
+

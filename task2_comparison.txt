@@ -1,0 +1,77 @@
+Normalization Method Comparison
+================================================================================
+
+Min-Max Normalization:
+--------------------------------------------------------------------------------
+  - Scales vertices to [0, 1] range
+  - Preserves relative distances within the mesh
+  - Shape is preserved, but scale is normalized
+  - Good for meshes with varying scales
+
+Unit Sphere Normalization:
+--------------------------------------------------------------------------------
+  - Centers mesh at origin and scales to fit in unit sphere
+  - Vertices lie in approximately [-1, 1] range
+  - Preserves overall shape and proportions
+  - Good for maintaining mesh structure relative to center
+
+Observations per Mesh:
+--------------------------------------------------------------------------------
+
+branch.obj:
+  Min-Max range: [0.0000, 1.0000]
+  Min-Max mean: 0.5832, std: 0.2229
+  Unit Sphere range: [-0.8052, 0.6020]
+  Unit Sphere mean: -0.0000, std: 0.2589
+
+cylinder.obj:
+  Min-Max range: [0.0000, 1.0000]
+  Min-Max mean: 0.5000, std: 0.4082
+  Unit Sphere range: [-0.7071, 0.7071]
+  Unit Sphere mean: -0.0000, std: 0.5774
+
+explosive.obj:
+  Min-Max range: [0.0000, 1.0000]
+  Min-Max mean: 0.5426, std: 0.3161
+  Unit Sphere range: [-0.9635, 0.8575]
+  Unit Sphere mean: 0.0000, std: 0.4389
+
+fence.obj:
+  Min-Max range: [0.0000, 1.0000]
+  Min-Max mean: 0.4912, std: 0.3000
+  Unit Sphere range: [-0.8091, 0.8205]
+  Unit Sphere mean: 0.0000, std: 0.4038
+
+girl.obj:
+  Min-Max range: [0.0000, 1.0000]
+  Min-Max mean: 0.4956, std: 0.2012
+  Unit Sphere range: [-0.9456, 0.9435]
+  Unit Sphere mean: -0.0000, std: 0.3108
+
+person.obj:
+  Min-Max range: [0.0000, 1.0000]
+  Min-Max mean: 0.5358, std: 0.2492
+  Unit Sphere range: [-0.9765, 0.7048]
+  Unit Sphere mean: -0.0000, std: 0.3178
+
+table.obj:
+  Min-Max range: [0.0000, 1.0000]
+  Min-Max mean: 0.5321, std: 0.3501
+  Unit Sphere range: [-0.8130, 0.8247]
+  Unit Sphere mean: -0.0000, std: 0.4012
+
+talwar.obj:
+  Min-Max range: [0.0000, 1.0000]
+  Min-Max mean: 0.5413, std: 0.3034
+  Unit Sphere range: [-0.4326, 0.9961]
+  Unit Sphere mean: 0.0000, std: 0.1994
+
+================================================================================
+Conclusion:
+--------------------------------------------------------------------------------
+Both normalization methods preserve the mesh structure effectively.
+Min-Max normalization provides a consistent [0, 1] range which is
+advantageous for quantization, while Unit Sphere normalization
+maintains the mesh centered at the origin which can be useful for
+rotation-invariant processing. The choice depends on the specific
+application requirements.

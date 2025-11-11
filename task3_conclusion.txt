@@ -1,0 +1,33 @@
+================================================================================
+CONCLUSION
+================================================================================
+
+Error Analysis Summary:
+--------------------------------------------------------------------------------
+Average MSE (Min-Max): 0.00000009
+Average MSE (Unit Sphere): 0.00000027
+Average MAE (Min-Max): 0.00021378
+Average MAE (Unit Sphere): 0.00043057
+
+Min-Max normalization produces lower reconstruction error on average.
+
+Observations:
+--------------------------------------------------------------------------------
+1. Quantization with 1024 bins introduces minimal information loss.
+2. The reconstruction errors are very small, indicating that the
+   quantization process preserves mesh structure effectively.
+3. Error patterns may vary depending on the mesh geometry and
+   the distribution of vertices in 3D space.
+4. Both normalization methods are suitable for mesh processing,
+   with the choice depending on specific application requirements.
+
+Recommendations:
+--------------------------------------------------------------------------------
+- For applications requiring minimal reconstruction error, use the
+  method with lower error (Min-Max).
+- Consider the mesh characteristics: Min-Max is better for
+  preserving scale relationships, while Unit Sphere is better for
+  rotation-invariant processing.
+- The quantization bin size (1024) provides a good balance between
+  compression and quality. Increasing bins reduces error but
+  increases storage requirements.
