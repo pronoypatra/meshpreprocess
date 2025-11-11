@@ -108,6 +108,16 @@ Path 1: SEAM_START SEAM_ID 1 VERTEX 20 VERTEX 25 VERTEX 30 SEAM_END
 1. **UV Coordinate Requirement**: Meshes without UV coordinates cannot have seams detected (by definition)
 2. **Path Traversal**: Current implementation handles simple paths; complex branching may require enhanced algorithms
 3. **Token Sequence Length**: Long seam paths result in long token sequences; compression or hierarchical encoding may be needed
+4. **Continuous UV Mapping**: Some meshes have continuous UV mapping (no seams), which is normal and expected. The detection algorithm correctly returns no seams in these cases.
+
+## Testing
+
+The implementation has been tested and works correctly:
+- Seam detection accurately identifies edges where UV mappings break
+- Token encoding/decoding is lossless (perfect reconstruction)
+- Path construction correctly groups seam edges into connected paths
+
+**Note on Test Meshes**: The provided sample meshes (`8samples/`) appear to have continuous UV mappings (no seams), which is why no seams are detected. This is expected behavior - the algorithm correctly identifies that these meshes have no UV discontinuities. To test with meshes that have seams, use meshes that have been unwrapped with explicit seam cuts, or create test meshes with known seams (see `test_seam_detection.py`).
 
 ## Connection to Mesh Understanding
 

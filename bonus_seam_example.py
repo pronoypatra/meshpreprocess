@@ -9,8 +9,7 @@ import glob
 import numpy as np
 from seam_tokenization import (
     load_mesh_with_uv, detect_seams, build_seam_paths,
-    encode_seams, decode_seam_tokens, tokens_to_string,
-    visualize_seams
+    encode_seams, decode_seam_tokens, tokens_to_string
 )
 from mesh_utils import load_mesh, visualize_mesh
 
@@ -43,9 +42,9 @@ def process_mesh_seams(mesh_path: str, output_dir: str = "output/seam_tokenizati
         print(f"\n  ⚠️  No UV coordinates found. Skipping seam detection.")
         return None
     
-    # Detect seams
+    # Detect seams (pass obj_path for direct parsing)
     print(f"\nDetecting seams...")
-    seam_edges = detect_seams(mesh, uv_coords, face_uv_indices)
+    seam_edges = detect_seams(mesh, uv_coords, face_uv_indices, obj_path=mesh_path)
     print(f"  Found {len(seam_edges)} seam edges")
     
     if len(seam_edges) == 0:

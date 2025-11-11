@@ -1,0 +1,702 @@
+Seam Tokenization Results for branch.obj
+================================================================================
+
+Mesh: branch.obj
+Vertices: 2767
+Faces: 1960
+Seam edges: 346
+Seam paths: 138
+Total tokens: 1520
+
+Token Sequences:
+--------------------------------------------------------------------------------
+
+Path 0:
+  Token sequence: SEAM_START SEAM_ID 0 VERTEX 587 VERTEX 592 SEAM_END
+  Vertex path: [587, 592]
+  Length: 2 vertices, 8 tokens
+
+Path 1:
+  Token sequence: SEAM_START SEAM_ID 1 VERTEX 147 VERTEX 149 SEAM_END
+  Vertex path: [147, 149]
+  Length: 2 vertices, 8 tokens
+
+Path 2:
+  Token sequence: SEAM_START SEAM_ID 2 VERTEX 292 VERTEX 433 VERTEX 330 VERTEX 329 VERTEX 326 VERTEX 323 VERTEX 321 VERTEX 291 VERTEX 320 VERTEX 284 SEAM_END
+  Vertex path: [292, 433, 330, 329, 326, 323, 321, 291, 320, 284]
+  Length: 10 vertices, 24 tokens
+
+Path 3:
+  Token sequence: SEAM_START SEAM_ID 3 VERTEX 0 VERTEX 5 VERTEX 6 VERTEX 12 SEAM_END
+  Vertex path: [0, 5, 6, 12]
+  Length: 4 vertices, 12 tokens
+
+Path 4:
+  Token sequence: SEAM_START SEAM_ID 4 VERTEX 41 VERTEX 40 VERTEX 19 VERTEX 14 SEAM_END
+  Vertex path: [41, 40, 19, 14]
+  Length: 4 vertices, 12 tokens
+
+Path 5:
+  Token sequence: SEAM_START SEAM_ID 5 VERTEX 693 VERTEX 704 VERTEX 780 VERTEX 803 VERTEX 824 SEAM_END
+  Vertex path: [693, 704, 780, 803, 824]
+  Length: 5 vertices, 14 tokens
+
+Path 6:
+  Token sequence: SEAM_START SEAM_ID 6 VERTEX 109 VERTEX 61 VERTEX 56 SEAM_END
+  Vertex path: [109, 61, 56]
+  Length: 3 vertices, 10 tokens
+
+Path 7:
+  Token sequence: SEAM_START SEAM_ID 7 VERTEX 643 VERTEX 650 VERTEX 629 VERTEX 624 VERTEX 625 VERTEX 645 VERTEX 671 VERTEX 681 VERTEX 682 VERTEX 744 VERTEX 743 VERTEX 646 VERTEX 687 SEAM_END
+  Vertex path: [643, 650, 629, 624, 625, 645, 671, 681, 682, 744, 743, 646, 687]
+  Length: 13 vertices, 30 tokens
+
+Path 8:
+  Token sequence: SEAM_START SEAM_ID 8 VERTEX 650 VERTEX 607 SEAM_END
+  Vertex path: [650, 607]
+  Length: 2 vertices, 8 tokens
+
+Path 9:
+  Token sequence: SEAM_START SEAM_ID 9 VERTEX 416 VERTEX 449 VERTEX 472 VERTEX 471 SEAM_END
+  Vertex path: [416, 449, 472, 471]
+  Length: 4 vertices, 12 tokens
+
+Path 10:
+  Token sequence: SEAM_START SEAM_ID 10 VERTEX 83 VERTEX 35 VERTEX 36 VERTEX 18 SEAM_END
+  Vertex path: [83, 35, 36, 18]
+  Length: 4 vertices, 12 tokens
+
+Path 11:
+  Token sequence: SEAM_START SEAM_ID 11 VERTEX 409 VERTEX 387 VERTEX 382 SEAM_END
+  Vertex path: [409, 387, 382]
+  Length: 3 vertices, 10 tokens
+
+Path 12:
+  Token sequence: SEAM_START SEAM_ID 12 VERTEX 402 VERTEX 415 SEAM_END
+  Vertex path: [402, 415]
+  Length: 2 vertices, 8 tokens
+
+Path 13:
+  Token sequence: SEAM_START SEAM_ID 13 VERTEX 736 VERTEX 734 VERTEX 713 SEAM_END
+  Vertex path: [736, 734, 713]
+  Length: 3 vertices, 10 tokens
+
+Path 14:
+  Token sequence: SEAM_START SEAM_ID 14 VERTEX 114 VERTEX 115 SEAM_END
+  Vertex path: [114, 115]
+  Length: 2 vertices, 8 tokens
+
+Path 15:
+  Token sequence: SEAM_START SEAM_ID 15 VERTEX 826 VERTEX 846 VERTEX 855 VERTEX 866 VERTEX 885 VERTEX 893 SEAM_END
+  Vertex path: [826, 846, 855, 866, 885, 893]
+  Length: 6 vertices, 16 tokens
+
+Path 16:
+  Token sequence: SEAM_START SEAM_ID 16 VERTEX 17 VERTEX 39 SEAM_END
+  Vertex path: [17, 39]
+  Length: 2 vertices, 8 tokens
+
+Path 17:
+  Token sequence: SEAM_START SEAM_ID 17 VERTEX 180 VERTEX 177 VERTEX 178 VERTEX 147 VERTEX 176 VERTEX 165 SEAM_END
+  Vertex path: [180, 177, 178, 147, 176, 165]
+  Length: 6 vertices, 16 tokens
+
+Path 18:
+  Token sequence: SEAM_START SEAM_ID 18 VERTEX 38 VERTEX 98 VERTEX 91 VERTEX 100 VERTEX 26 VERTEX 16 SEAM_END
+  Vertex path: [38, 98, 91, 100, 26, 16]
+  Length: 6 vertices, 16 tokens
+
+Path 19:
+  Token sequence: SEAM_START SEAM_ID 19 VERTEX 98 VERTEX 90 VERTEX 86 SEAM_END
+  Vertex path: [98, 90, 86]
+  Length: 3 vertices, 10 tokens
+
+Path 20:
+  Token sequence: SEAM_START SEAM_ID 20 VERTEX 490 VERTEX 496 SEAM_END
+  Vertex path: [490, 496]
+  Length: 2 vertices, 8 tokens
+
+Path 21:
+  Token sequence: SEAM_START SEAM_ID 21 VERTEX 328 VERTEX 312 VERTEX 331 VERTEX 352 SEAM_END
+  Vertex path: [328, 312, 331, 352]
+  Length: 4 vertices, 12 tokens
+
+Path 22:
+  Token sequence: SEAM_START SEAM_ID 22 VERTEX 100 VERTEX 21 SEAM_END
+  Vertex path: [100, 21]
+  Length: 2 vertices, 8 tokens
+
+Path 23:
+  Token sequence: SEAM_START SEAM_ID 23 VERTEX 346 VERTEX 353 SEAM_END
+  Vertex path: [346, 353]
+  Length: 2 vertices, 8 tokens
+
+Path 24:
+  Token sequence: SEAM_START SEAM_ID 24 VERTEX 195 VERTEX 123 VERTEX 203 SEAM_END
+  Vertex path: [195, 123, 203]
+  Length: 3 vertices, 10 tokens
+
+Path 25:
+  Token sequence: SEAM_START SEAM_ID 25 VERTEX 7 VERTEX 11 SEAM_END
+  Vertex path: [7, 11]
+  Length: 2 vertices, 8 tokens
+
+Path 26:
+  Token sequence: SEAM_START SEAM_ID 26 VERTEX 912 VERTEX 911 VERTEX 914 VERTEX 921 VERTEX 850 SEAM_END
+  Vertex path: [912, 911, 914, 921, 850]
+  Length: 5 vertices, 14 tokens
+
+Path 27:
+  Token sequence: SEAM_START SEAM_ID 27 VERTEX 478 VERTEX 517 VERTEX 498 VERTEX 511 VERTEX 505 VERTEX 508 VERTEX 519 VERTEX 527 SEAM_END
+  Vertex path: [478, 517, 498, 511, 505, 508, 519, 527]
+  Length: 8 vertices, 20 tokens
+
+Path 28:
+  Token sequence: SEAM_START SEAM_ID 28 VERTEX 517 VERTEX 544 SEAM_END
+  Vertex path: [517, 544]
+  Length: 2 vertices, 8 tokens
+
+Path 29:
+  Token sequence: SEAM_START SEAM_ID 29 VERTEX 161 VERTEX 163 VERTEX 140 VERTEX 97 VERTEX 88 VERTEX 87 SEAM_END
+  Vertex path: [161, 163, 140, 97, 88, 87]
+  Length: 6 vertices, 16 tokens
+
+Path 30:
+  Token sequence: SEAM_START SEAM_ID 30 VERTEX 305 VERTEX 473 SEAM_END
+  Vertex path: [305, 473]
+  Length: 2 vertices, 8 tokens
+
+Path 31:
+  Token sequence: SEAM_START SEAM_ID 31 VERTEX 364 VERTEX 369 VERTEX 455 SEAM_END
+  Vertex path: [364, 369, 455]
+  Length: 3 vertices, 10 tokens
+
+Path 32:
+  Token sequence: SEAM_START SEAM_ID 32 VERTEX 584 VERTEX 583 VERTEX 593 VERTEX 600 VERTEX 749 SEAM_END
+  Vertex path: [584, 583, 593, 600, 749]
+  Length: 5 vertices, 14 tokens
+
+Path 33:
+  Token sequence: SEAM_START SEAM_ID 33 VERTEX 135 VERTEX 146 SEAM_END
+  Vertex path: [135, 146]
+  Length: 2 vertices, 8 tokens
+
+Path 34:
+  Token sequence: SEAM_START SEAM_ID 34 VERTEX 645 VERTEX 631 SEAM_END
+  Vertex path: [645, 631]
+  Length: 2 vertices, 8 tokens
+
+Path 35:
+  Token sequence: SEAM_START SEAM_ID 35 VERTEX 278 VERTEX 334 VERTEX 339 VERTEX 357 SEAM_END
+  Vertex path: [278, 334, 339, 357]
+  Length: 4 vertices, 12 tokens
+
+Path 36:
+  Token sequence: SEAM_START SEAM_ID 36 VERTEX 763 VERTEX 766 VERTEX 761 VERTEX 762 VERTEX 736 VERTEX 714 VERTEX 699 VERTEX 715 SEAM_END
+  Vertex path: [763, 766, 761, 762, 736, 714, 699, 715]
+  Length: 8 vertices, 20 tokens
+
+Path 37:
+  Token sequence: SEAM_START SEAM_ID 37 VERTEX 23 VERTEX 62 SEAM_END
+  Vertex path: [23, 62]
+  Length: 2 vertices, 8 tokens
+
+Path 38:
+  Token sequence: SEAM_START SEAM_ID 38 VERTEX 556 VERTEX 553 VERTEX 554 VERTEX 560 VERTEX 559 VERTEX 557 VERTEX 548 VERTEX 537 SEAM_END
+  Vertex path: [556, 553, 554, 560, 559, 557, 548, 537]
+  Length: 8 vertices, 20 tokens
+
+Path 39:
+  Token sequence: SEAM_START SEAM_ID 39 VERTEX 548 VERTEX 494 VERTEX 535 VERTEX 512 VERTEX 495 VERTEX 485 SEAM_END
+  Vertex path: [548, 494, 535, 512, 495, 485]
+  Length: 6 vertices, 16 tokens
+
+Path 40:
+  Token sequence: SEAM_START SEAM_ID 40 VERTEX 866 VERTEX 858 VERTEX 859 SEAM_END
+  Vertex path: [866, 858, 859]
+  Length: 3 vertices, 10 tokens
+
+Path 41:
+  Token sequence: SEAM_START SEAM_ID 41 VERTEX 28 VERTEX 33 SEAM_END
+  Vertex path: [28, 33]
+  Length: 2 vertices, 8 tokens
+
+Path 42:
+  Token sequence: SEAM_START SEAM_ID 42 VERTEX 371 VERTEX 372 VERTEX 395 VERTEX 386 SEAM_END
+  Vertex path: [371, 372, 395, 386]
+  Length: 4 vertices, 12 tokens
+
+Path 43:
+  Token sequence: SEAM_START SEAM_ID 43 VERTEX 31 VERTEX 43 SEAM_END
+  Vertex path: [31, 43]
+  Length: 2 vertices, 8 tokens
+
+Path 44:
+  Token sequence: SEAM_START SEAM_ID 44 VERTEX 34 VERTEX 72 VERTEX 103 VERTEX 116 VERTEX 133 VERTEX 151 VERTEX 168 VERTEX 184 VERTEX 179 VERTEX 171 SEAM_END
+  Vertex path: [34, 72, 103, 116, 133, 151, 168, 184, 179, 171]
+  Length: 10 vertices, 24 tokens
+
+Path 45:
+  Token sequence: SEAM_START SEAM_ID 45 VERTEX 500 VERTEX 482 VERTEX 474 VERTEX 356 VERTEX 340 SEAM_END
+  Vertex path: [500, 482, 474, 356, 340]
+  Length: 5 vertices, 14 tokens
+
+Path 46:
+  Token sequence: SEAM_START SEAM_ID 46 VERTEX 65 VERTEX 68 SEAM_END
+  Vertex path: [65, 68]
+  Length: 2 vertices, 8 tokens
+
+Path 47:
+  Token sequence: SEAM_START SEAM_ID 47 VERTEX 264 VERTEX 277 SEAM_END
+  Vertex path: [264, 277]
+  Length: 2 vertices, 8 tokens
+
+Path 48:
+  Token sequence: SEAM_START SEAM_ID 48 VERTEX 719 VERTEX 665 VERTEX 663 VERTEX 661 SEAM_END
+  Vertex path: [719, 665, 663, 661]
+  Length: 4 vertices, 12 tokens
+
+Path 49:
+  Token sequence: SEAM_START SEAM_ID 49 VERTEX 120 VERTEX 129 VERTEX 162 VERTEX 185 VERTEX 200 SEAM_END
+  Vertex path: [120, 129, 162, 185, 200]
+  Length: 5 vertices, 14 tokens
+
+Path 50:
+  Token sequence: SEAM_START SEAM_ID 50 VERTEX 374 VERTEX 337 VERTEX 375 VERTEX 405 VERTEX 367 VERTEX 381 SEAM_END
+  Vertex path: [374, 337, 375, 405, 367, 381]
+  Length: 6 vertices, 16 tokens
+
+Path 51:
+  Token sequence: SEAM_START SEAM_ID 51 VERTEX 289 VERTEX 306 SEAM_END
+  Vertex path: [289, 306]
+  Length: 2 vertices, 8 tokens
+
+Path 52:
+  Token sequence: SEAM_START SEAM_ID 52 VERTEX 597 VERTEX 724 VERTEX 706 SEAM_END
+  Vertex path: [597, 724, 706]
+  Length: 3 vertices, 10 tokens
+
+Path 53:
+  Token sequence: SEAM_START SEAM_ID 53 VERTEX 459 VERTEX 475 SEAM_END
+  Vertex path: [459, 475]
+  Length: 2 vertices, 8 tokens
+
+Path 54:
+  Token sequence: SEAM_START SEAM_ID 54 VERTEX 571 VERTEX 570 VERTEX 575 VERTEX 642 SEAM_END
+  Vertex path: [571, 570, 575, 642]
+  Length: 4 vertices, 12 tokens
+
+Path 55:
+  Token sequence: SEAM_START SEAM_ID 55 VERTEX 499 VERTEX 547 VERTEX 564 VERTEX 568 VERTEX 601 VERTEX 638 VERTEX 648 VERTEX 667 VERTEX 679 VERTEX 685 VERTEX 700 SEAM_END
+  Vertex path: [499, 547, 564, 568, 601, 638, 648, 667, 679, 685, 700]
+  Length: 11 vertices, 26 tokens
+
+Path 56:
+  Token sequence: SEAM_START SEAM_ID 56 VERTEX 958 VERTEX 972 VERTEX 973 VERTEX 971 VERTEX 947 SEAM_END
+  Vertex path: [958, 972, 973, 971, 947]
+  Length: 5 vertices, 14 tokens
+
+Path 57:
+  Token sequence: SEAM_START SEAM_ID 57 VERTEX 883 VERTEX 873 VERTEX 878 VERTEX 905 VERTEX 920 VERTEX 946 VERTEX 952 VERTEX 960 VERTEX 975 VERTEX 974 VERTEX 976 VERTEX 969 SEAM_END
+  Vertex path: [883, 873, 878, 905, 920, 946, 952, 960, 975, 974, 976, 969]
+  Length: 12 vertices, 28 tokens
+
+Path 58:
+  Token sequence: SEAM_START SEAM_ID 58 VERTEX 891 VERTEX 909 VERTEX 929 SEAM_END
+  Vertex path: [891, 909, 929]
+  Length: 3 vertices, 10 tokens
+
+Path 59:
+  Token sequence: SEAM_START SEAM_ID 59 VERTEX 293 VERTEX 307 SEAM_END
+  Vertex path: [293, 307]
+  Length: 2 vertices, 8 tokens
+
+Path 60:
+  Token sequence: SEAM_START SEAM_ID 60 VERTEX 535 VERTEX 531 VERTEX 545 SEAM_END
+  Vertex path: [535, 531, 545]
+  Length: 3 vertices, 10 tokens
+
+Path 61:
+  Token sequence: SEAM_START SEAM_ID 61 VERTEX 90 VERTEX 38 VERTEX 37 VERTEX 22 VERTEX 24 SEAM_END
+  Vertex path: [90, 38, 37, 22, 24]
+  Length: 5 vertices, 14 tokens
+
+Path 62:
+  Token sequence: SEAM_START SEAM_ID 62 VERTEX 49 VERTEX 50 SEAM_END
+  Vertex path: [49, 50]
+  Length: 2 vertices, 8 tokens
+
+Path 63:
+  Token sequence: SEAM_START SEAM_ID 63 VERTEX 586 VERTEX 584 VERTEX 581 SEAM_END
+  Vertex path: [586, 584, 581]
+  Length: 3 vertices, 10 tokens
+
+Path 64:
+  Token sequence: SEAM_START SEAM_ID 64 VERTEX 282 VERTEX 293 VERTEX 247 VERTEX 279 VERTEX 308 VERTEX 315 VERTEX 316 VERTEX 317 VERTEX 335 SEAM_END
+  Vertex path: [282, 293, 247, 279, 308, 315, 316, 317, 335]
+  Length: 9 vertices, 22 tokens
+
+Path 65:
+  Token sequence: SEAM_START SEAM_ID 65 VERTEX 489 VERTEX 493 VERTEX 540 SEAM_END
+  Vertex path: [489, 493, 540]
+  Length: 3 vertices, 10 tokens
+
+Path 66:
+  Token sequence: SEAM_START SEAM_ID 66 VERTEX 213 VERTEX 189 VERTEX 207 SEAM_END
+  Vertex path: [213, 189, 207]
+  Length: 3 vertices, 10 tokens
+
+Path 67:
+  Token sequence: SEAM_START SEAM_ID 67 VERTEX 457 VERTEX 451 VERTEX 447 VERTEX 446 VERTEX 354 VERTEX 341 SEAM_END
+  Vertex path: [457, 451, 447, 446, 354, 341]
+  Length: 6 vertices, 16 tokens
+
+Path 68:
+  Token sequence: SEAM_START SEAM_ID 68 VERTEX 233 VERTEX 243 SEAM_END
+  Vertex path: [233, 243]
+  Length: 2 vertices, 8 tokens
+
+Path 69:
+  Token sequence: SEAM_START SEAM_ID 69 VERTEX 64 VERTEX 65 VERTEX 57 SEAM_END
+  Vertex path: [64, 65, 57]
+  Length: 3 vertices, 10 tokens
+
+Path 70:
+  Token sequence: SEAM_START SEAM_ID 70 VERTEX 215 VERTEX 225 VERTEX 227 SEAM_END
+  Vertex path: [215, 225, 227]
+  Length: 3 vertices, 10 tokens
+
+Path 71:
+  Token sequence: SEAM_START SEAM_ID 71 VERTEX 258 VERTEX 299 SEAM_END
+  Vertex path: [258, 299]
+  Length: 2 vertices, 8 tokens
+
+Path 72:
+  Token sequence: SEAM_START SEAM_ID 72 VERTEX 902 VERTEX 904 VERTEX 900 SEAM_END
+  Vertex path: [902, 904, 900]
+  Length: 3 vertices, 10 tokens
+
+Path 73:
+  Token sequence: SEAM_START SEAM_ID 73 VERTEX 783 VERTEX 785 VERTEX 796 VERTEX 815 SEAM_END
+  Vertex path: [783, 785, 796, 815]
+  Length: 4 vertices, 12 tokens
+
+Path 74:
+  Token sequence: SEAM_START SEAM_ID 74 VERTEX 113 VERTEX 81 VERTEX 51 VERTEX 76 SEAM_END
+  Vertex path: [113, 81, 51, 76]
+  Length: 4 vertices, 12 tokens
+
+Path 75:
+  Token sequence: SEAM_START SEAM_ID 75 VERTEX 675 VERTEX 708 SEAM_END
+  Vertex path: [675, 708]
+  Length: 2 vertices, 8 tokens
+
+Path 76:
+  Token sequence: SEAM_START SEAM_ID 76 VERTEX 660 VERTEX 683 VERTEX 599 SEAM_END
+  Vertex path: [660, 683, 599]
+  Length: 3 vertices, 10 tokens
+
+Path 77:
+  Token sequence: SEAM_START SEAM_ID 77 VERTEX 370 VERTEX 373 SEAM_END
+  Vertex path: [370, 373]
+  Length: 2 vertices, 8 tokens
+
+Path 78:
+  Token sequence: SEAM_START SEAM_ID 78 VERTEX 199 VERTEX 244 VERTEX 191 SEAM_END
+  Vertex path: [199, 244, 191]
+  Length: 3 vertices, 10 tokens
+
+Path 79:
+  Token sequence: SEAM_START SEAM_ID 79 VERTEX 244 VERTEX 245 SEAM_END
+  Vertex path: [244, 245]
+  Length: 2 vertices, 8 tokens
+
+Path 80:
+  Token sequence: SEAM_START SEAM_ID 80 VERTEX 738 VERTEX 712 VERTEX 698 VERTEX 676 SEAM_END
+  Vertex path: [738, 712, 698, 676]
+  Length: 4 vertices, 12 tokens
+
+Path 81:
+  Token sequence: SEAM_START SEAM_ID 81 VERTEX 152 VERTEX 159 VERTEX 124 VERTEX 125 VERTEX 126 VERTEX 180 VERTEX 167 SEAM_END
+  Vertex path: [152, 159, 124, 125, 126, 180, 167]
+  Length: 7 vertices, 18 tokens
+
+Path 82:
+  Token sequence: SEAM_START SEAM_ID 82 VERTEX 435 VERTEX 438 VERTEX 436 SEAM_END
+  Vertex path: [435, 438, 436]
+  Length: 3 vertices, 10 tokens
+
+Path 83:
+  Token sequence: SEAM_START SEAM_ID 83 VERTEX 438 VERTEX 409 VERTEX 443 SEAM_END
+  Vertex path: [438, 409, 443]
+  Length: 3 vertices, 10 tokens
+
+Path 84:
+  Token sequence: SEAM_START SEAM_ID 84 VERTEX 238 VERTEX 236 VERTEX 255 SEAM_END
+  Vertex path: [238, 236, 255]
+  Length: 3 vertices, 10 tokens
+
+Path 85:
+  Token sequence: SEAM_START SEAM_ID 85 VERTEX 813 VERTEX 794 VERTEX 779 SEAM_END
+  Vertex path: [813, 794, 779]
+  Length: 3 vertices, 10 tokens
+
+Path 86:
+  Token sequence: SEAM_START SEAM_ID 86 VERTEX 828 VERTEX 827 VERTEX 790 SEAM_END
+  Vertex path: [828, 827, 790]
+  Length: 3 vertices, 10 tokens
+
+Path 87:
+  Token sequence: SEAM_START SEAM_ID 87 VERTEX 450 VERTEX 439 VERTEX 389 VERTEX 388 VERTEX 417 SEAM_END
+  Vertex path: [450, 439, 389, 388, 417]
+  Length: 5 vertices, 14 tokens
+
+Path 88:
+  Token sequence: SEAM_START SEAM_ID 88 VERTEX 742 VERTEX 770 SEAM_END
+  Vertex path: [742, 770]
+  Length: 2 vertices, 8 tokens
+
+Path 89:
+  Token sequence: SEAM_START SEAM_ID 89 VERTEX 221 VERTEX 222 SEAM_END
+  Vertex path: [221, 222]
+  Length: 2 vertices, 8 tokens
+
+Path 90:
+  Token sequence: SEAM_START SEAM_ID 90 VERTEX 270 VERTEX 228 VERTEX 226 SEAM_END
+  Vertex path: [270, 228, 226]
+  Length: 3 vertices, 10 tokens
+
+Path 91:
+  Token sequence: SEAM_START SEAM_ID 91 VERTEX 752 VERTEX 806 VERTEX 777 SEAM_END
+  Vertex path: [752, 806, 777]
+  Length: 3 vertices, 10 tokens
+
+Path 92:
+  Token sequence: SEAM_START SEAM_ID 92 VERTEX 755 VERTEX 820 SEAM_END
+  Vertex path: [755, 820]
+  Length: 2 vertices, 8 tokens
+
+Path 93:
+  Token sequence: SEAM_START SEAM_ID 93 VERTEX 807 VERTEX 848 SEAM_END
+  Vertex path: [807, 848]
+  Length: 2 vertices, 8 tokens
+
+Path 94:
+  Token sequence: SEAM_START SEAM_ID 94 VERTEX 69 VERTEX 83 VERTEX 70 VERTEX 79 VERTEX 94 SEAM_END
+  Vertex path: [69, 83, 70, 79, 94]
+  Length: 5 vertices, 14 tokens
+
+Path 95:
+  Token sequence: SEAM_START SEAM_ID 95 VERTEX 172 VERTEX 175 SEAM_END
+  Vertex path: [172, 175]
+  Length: 2 vertices, 8 tokens
+
+Path 96:
+  Token sequence: SEAM_START SEAM_ID 96 VERTEX 259 VERTEX 338 VERTEX 355 SEAM_END
+  Vertex path: [259, 338, 355]
+  Length: 3 vertices, 10 tokens
+
+Path 97:
+  Token sequence: SEAM_START SEAM_ID 97 VERTEX 413 VERTEX 414 SEAM_END
+  Vertex path: [413, 414]
+  Length: 2 vertices, 8 tokens
+
+Path 98:
+  Token sequence: SEAM_START SEAM_ID 98 VERTEX 615 VERTEX 628 SEAM_END
+  Vertex path: [615, 628]
+  Length: 2 vertices, 8 tokens
+
+Path 99:
+  Token sequence: SEAM_START SEAM_ID 99 VERTEX 616 VERTEX 620 VERTEX 649 VERTEX 723 SEAM_END
+  Vertex path: [616, 620, 649, 723]
+  Length: 4 vertices, 12 tokens
+
+Path 100:
+  Token sequence: SEAM_START SEAM_ID 100 VERTEX 101 VERTEX 137 VERTEX 150 SEAM_END
+  Vertex path: [101, 137, 150]
+  Length: 3 vertices, 10 tokens
+
+Path 101:
+  Token sequence: SEAM_START SEAM_ID 101 VERTEX 572 VERTEX 573 VERTEX 576 VERTEX 596 VERTEX 586 VERTEX 580 SEAM_END
+  Vertex path: [572, 573, 576, 596, 586, 580]
+  Length: 6 vertices, 16 tokens
+
+Path 102:
+  Token sequence: SEAM_START SEAM_ID 102 VERTEX 378 VERTEX 376 VERTEX 343 SEAM_END
+  Vertex path: [378, 376, 343]
+  Length: 3 vertices, 10 tokens
+
+Path 103:
+  Token sequence: SEAM_START SEAM_ID 103 VERTEX 112 VERTEX 170 SEAM_END
+  Vertex path: [112, 170]
+  Length: 2 vertices, 8 tokens
+
+Path 104:
+  Token sequence: SEAM_START SEAM_ID 104 VERTEX 143 VERTEX 157 SEAM_END
+  Vertex path: [143, 157]
+  Length: 2 vertices, 8 tokens
+
+Path 105:
+  Token sequence: SEAM_START SEAM_ID 105 VERTEX 689 VERTEX 591 VERTEX 707 SEAM_END
+  Vertex path: [689, 591, 707]
+  Length: 3 vertices, 10 tokens
+
+Path 106:
+  Token sequence: SEAM_START SEAM_ID 106 VERTEX 345 VERTEX 349 SEAM_END
+  Vertex path: [345, 349]
+  Length: 2 vertices, 8 tokens
+
+Path 107:
+  Token sequence: SEAM_START SEAM_ID 107 VERTEX 692 VERTEX 740 SEAM_END
+  Vertex path: [692, 740]
+  Length: 2 vertices, 8 tokens
+
+Path 108:
+  Token sequence: SEAM_START SEAM_ID 108 VERTEX 796 VERTEX 728 SEAM_END
+  Vertex path: [796, 728]
+  Length: 2 vertices, 8 tokens
+
+Path 109:
+  Token sequence: SEAM_START SEAM_ID 109 VERTEX 260 VERTEX 273 SEAM_END
+  Vertex path: [260, 273]
+  Length: 2 vertices, 8 tokens
+
+Path 110:
+  Token sequence: SEAM_START SEAM_ID 110 VERTEX 394 VERTEX 393 VERTEX 426 VERTEX 380 SEAM_END
+  Vertex path: [394, 393, 426, 380]
+  Length: 4 vertices, 12 tokens
+
+Path 111:
+  Token sequence: SEAM_START SEAM_ID 111 VERTEX 266 VERTEX 264 VERTEX 265 SEAM_END
+  Vertex path: [266, 264, 265]
+  Length: 3 vertices, 10 tokens
+
+Path 112:
+  Token sequence: SEAM_START SEAM_ID 112 VERTEX 745 VERTEX 746 SEAM_END
+  Vertex path: [745, 746]
+  Length: 2 vertices, 8 tokens
+
+Path 113:
+  Token sequence: SEAM_START SEAM_ID 113 VERTEX 89 VERTEX 139 SEAM_END
+  Vertex path: [89, 139]
+  Length: 2 vertices, 8 tokens
+
+Path 114:
+  Token sequence: SEAM_START SEAM_ID 114 VERTEX 651 VERTEX 684 SEAM_END
+  Vertex path: [651, 684]
+  Length: 2 vertices, 8 tokens
+
+Path 115:
+  Token sequence: SEAM_START SEAM_ID 115 VERTEX 802 VERTEX 844 SEAM_END
+  Vertex path: [802, 844]
+  Length: 2 vertices, 8 tokens
+
+Path 116:
+  Token sequence: SEAM_START SEAM_ID 116 VERTEX 82 VERTEX 127 SEAM_END
+  Vertex path: [82, 127]
+  Length: 2 vertices, 8 tokens
+
+Path 117:
+  Token sequence: SEAM_START SEAM_ID 117 VERTEX 954 VERTEX 968 SEAM_END
+  Vertex path: [954, 968]
+  Length: 2 vertices, 8 tokens
+
+Path 118:
+  Token sequence: SEAM_START SEAM_ID 118 VERTEX 468 VERTEX 467 VERTEX 481 VERTEX 469 VERTEX 456 VERTEX 444 SEAM_END
+  Vertex path: [468, 467, 481, 469, 456, 444]
+  Length: 6 vertices, 16 tokens
+
+Path 119:
+  Token sequence: SEAM_START SEAM_ID 119 VERTEX 962 VERTEX 967 SEAM_END
+  Vertex path: [962, 967]
+  Length: 2 vertices, 8 tokens
+
+Path 120:
+  Token sequence: SEAM_START SEAM_ID 120 VERTEX 463 VERTEX 466 SEAM_END
+  Vertex path: [463, 466]
+  Length: 2 vertices, 8 tokens
+
+Path 121:
+  Token sequence: SEAM_START SEAM_ID 121 VERTEX 566 VERTEX 567 SEAM_END
+  Vertex path: [566, 567]
+  Length: 2 vertices, 8 tokens
+
+Path 122:
+  Token sequence: SEAM_START SEAM_ID 122 VERTEX 595 VERTEX 639 SEAM_END
+  Vertex path: [595, 639]
+  Length: 2 vertices, 8 tokens
+
+Path 123:
+  Token sequence: SEAM_START SEAM_ID 123 VERTEX 739 VERTEX 751 VERTEX 765 VERTEX 782 VERTEX 789 VERTEX 791 VERTEX 792 SEAM_END
+  Vertex path: [739, 751, 765, 782, 789, 791, 792]
+  Length: 7 vertices, 18 tokens
+
+Path 124:
+  Token sequence: SEAM_START SEAM_ID 124 VERTEX 206 VERTEX 260 VERTEX 248 SEAM_END
+  Vertex path: [206, 260, 248]
+  Length: 3 vertices, 10 tokens
+
+Path 125:
+  Token sequence: SEAM_START SEAM_ID 125 VERTEX 104 VERTEX 105 SEAM_END
+  Vertex path: [104, 105]
+  Length: 2 vertices, 8 tokens
+
+Path 126:
+  Token sequence: SEAM_START SEAM_ID 126 VERTEX 630 VERTEX 625 VERTEX 644 VERTEX 617 SEAM_END
+  Vertex path: [630, 625, 644, 617]
+  Length: 4 vertices, 12 tokens
+
+Path 127:
+  Token sequence: SEAM_START SEAM_ID 127 VERTEX 360 VERTEX 344 VERTEX 267 VERTEX 239 VERTEX 224 SEAM_END
+  Vertex path: [360, 344, 267, 239, 224]
+  Length: 5 vertices, 14 tokens
+
+Path 128:
+  Token sequence: SEAM_START SEAM_ID 128 VERTEX 53 VERTEX 54 SEAM_END
+  Vertex path: [53, 54]
+  Length: 2 vertices, 8 tokens
+
+Path 129:
+  Token sequence: SEAM_START SEAM_ID 129 VERTEX 25 VERTEX 99 SEAM_END
+  Vertex path: [25, 99]
+  Length: 2 vertices, 8 tokens
+
+Path 130:
+  Token sequence: SEAM_START SEAM_ID 130 VERTEX 156 VERTEX 173 SEAM_END
+  Vertex path: [156, 173]
+  Length: 2 vertices, 8 tokens
+
+Path 131:
+  Token sequence: SEAM_START SEAM_ID 131 VERTEX 422 VERTEX 423 SEAM_END
+  Vertex path: [422, 423]
+  Length: 2 vertices, 8 tokens
+
+Path 132:
+  Token sequence: SEAM_START SEAM_ID 132 VERTEX 613 VERTEX 619 SEAM_END
+  Vertex path: [613, 619]
+  Length: 2 vertices, 8 tokens
+
+Path 133:
+  Token sequence: SEAM_START SEAM_ID 133 VERTEX 85 VERTEX 117 SEAM_END
+  Vertex path: [85, 117]
+  Length: 2 vertices, 8 tokens
+
+Path 134:
+  Token sequence: SEAM_START SEAM_ID 134 VERTEX 662 VERTEX 664 SEAM_END
+  Vertex path: [662, 664]
+  Length: 2 vertices, 8 tokens
+
+Path 135:
+  Token sequence: SEAM_START SEAM_ID 135 VERTEX 458 VERTEX 461 SEAM_END
+  Vertex path: [458, 461]
+  Length: 2 vertices, 8 tokens
+
+Path 136:
+  Token sequence: SEAM_START SEAM_ID 136 VERTEX 298 VERTEX 350 SEAM_END
+  Vertex path: [298, 350]
+  Length: 2 vertices, 8 tokens
+
+Path 137:
+  Token sequence: SEAM_START SEAM_ID 137 VERTEX 351 VERTEX 362 SEAM_END
+  Vertex path: [351, 362]
+  Length: 2 vertices, 8 tokens

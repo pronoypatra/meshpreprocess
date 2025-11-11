@@ -7,6 +7,7 @@ Seams are edges where UV texture mappings break (same 3D edge has different UV c
 
 import numpy as np
 import trimesh
+import os
 from collections import defaultdict
 from typing import List, Dict, Tuple, Set, Optional
 
@@ -135,88 +136,215 @@ def get_edge_key(v1: int, v2: int) -> Tuple[int, int]:
     return (min(v1, v2), max(v1, v2))
 
 
-def detect_seams(mesh: trimesh.Trimesh, uv_coords: Optional[np.ndarray], 
-                 face_uv_indices: Optional[np.ndarray], 
-                 uv_tolerance: float = 1e-6) -> Set[Tuple[int, int]]:
+def detect_seams_from_obj(obj_path: str, uv_tolerance: float = 1e-6) -> Set[Tuple[int, int]]:
     """
-    Detect seam edges where UV mappings break.
+    Detect seam edges directly from OBJ file by comparing UV coordinates.
     
-    A seam edge is an edge where the same 3D vertices have different UV coordinates
-    in different faces.
+    A seam edge is detected when the same 3D edge (same vertex indices) appears
+    in different faces with different UV coordinates.
     
     Args:
-        mesh: trimesh.Trimesh object
-        uv_coords: (n_uv, 2) array of UV coordinates
-        face_uv_indices: (n_faces, 3) array of UV indices per face vertex
+        obj_path: Path to OBJ file
         uv_tolerance: Tolerance for UV coordinate comparison
         
     Returns:
-        set: Set of seam edges as (v1, v2) tuples (canonical order)
+        set: Set of seam edges as (v1, v2) tuples (vertex indices from OBJ)
     """
-    if uv_coords is None or face_uv_indices is None:
-        print("Warning: No UV coordinates found. Cannot detect seams.")
+    # Parse OBJ file to get vertices, UVs, and faces
+    vertices = []
+    uv_coords = []
+    faces = []  # List of (vertex_indices, uv_indices) per face
+    
+    try:
+        with open(obj_path, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith('v '):
+                    # Vertex position
+                    parts = line.split()[1:]
+                    if len(parts) >= 3:
+                        vertices.append([float(parts[0]), float(parts[1]), float(parts[2])])
+                elif line.startswith('vt '):
+                    # UV coordinate
+                    parts = line.split()[1:]
+                    if len(parts) >= 2:
+                        uv_coords.append([float(parts[0]), float(parts[1])])
+                elif line.startswith('f '):
+                    # Face with vertex/uv/normal indices
+                    parts = line.split()[1:]
+                    face_verts = []
+                    face_uvs = []
+                    for part in parts:
+                        vertex_parts = part.split('/')
+                        if len(vertex_parts) >= 1:
+                            # Vertex index (1-based in OBJ, convert to 0-based)
+                            v_idx = int(vertex_parts[0]) - 1
+                            face_verts.append(v_idx)
+                            
+                            # UV index (if present)
+                            if len(vertex_parts) >= 2 and vertex_parts[1]:
+                                uv_idx = int(vertex_parts[1]) - 1
+                                face_uvs.append(uv_idx)
+                            else:
+                                face_uvs.append(-1)
+                    
+                    if len(face_verts) >= 3 and len(face_uvs) >= 3:
+                        # Triangulate if needed (take first 3 vertices)
+                        faces.append((face_verts[:3], face_uvs[:3]))
+    except Exception as e:
+        print(f"Error parsing OBJ file: {e}")
         return set()
     
-    if len(face_uv_indices) != len(mesh.faces):
-        print("Warning: Face UV indices don't match mesh faces. Cannot detect seams.")
+    if not uv_coords or not faces:
         return set()
     
-    # Build edge-to-faces mapping
-    edge_faces = defaultdict(list)  # edge -> list of (face_idx, vertex_indices_in_face)
+    uv_coords = np.array(uv_coords)
     
-    for face_idx, face in enumerate(mesh.faces):
-        # Get UV indices for this face
-        face_uv = face_uv_indices[face_idx]
-        
+    # Build edge-to-faces mapping: edge (v1, v2) -> list of (face_idx, uv1, uv2)
+    edge_faces = defaultdict(list)
+    
+    for face_idx, (face_verts, face_uvs) in enumerate(faces):
         # Check each edge of the triangle
         for i in range(3):
-            v1 = face[i]
-            v2 = face[(i + 1) % 3]
-            edge = get_edge_key(v1, v2)
+            v1_idx = face_verts[i]
+            v2_idx = face_verts[(i + 1) % 3]
+            uv1_idx = face_uvs[i]
+            uv2_idx = face_uvs[(i + 1) % 3]
             
-            # Store which vertices in the face correspond to this edge
-            # and their UV indices
-            v1_in_face = i
-            v2_in_face = (i + 1) % 3
-            uv1_idx = face_uv[v1_in_face]
-            uv2_idx = face_uv[v2_in_face]
+            # Canonical edge key
+            edge = get_edge_key(v1_idx, v2_idx)
             
-            edge_faces[edge].append((face_idx, v1, v2, uv1_idx, uv2_idx))
+            # Store UV indices for this edge in this face
+            if uv1_idx >= 0 and uv2_idx >= 0:
+                edge_faces[edge].append((face_idx, uv1_idx, uv2_idx, v1_idx < v2_idx))
     
     # Find seams: edges where UV coordinates differ across faces
     seam_edges = set()
+    edges_checked = 0
+    edges_with_multiple_faces = 0
     
     for edge, face_data in edge_faces.items():
         if len(face_data) < 2:
-            # Boundary edge or edge with only one face - not a seam by our definition
+            # Boundary edge or edge with only one face
             continue
         
-        # Check if UV coordinates differ across faces
+        edges_with_multiple_faces += 1
+        edges_checked += 1
+        
+        # Collect UV pairs for this edge
         uv_pairs = []
-        for face_idx, v1, v2, uv1_idx, uv2_idx in face_data:
+        for face_idx, uv1_idx, uv2_idx, is_forward in face_data:
             if uv1_idx >= 0 and uv2_idx >= 0 and uv1_idx < len(uv_coords) and uv2_idx < len(uv_coords):
                 uv1 = uv_coords[uv1_idx]
                 uv2 = uv_coords[uv2_idx]
-                # Store UV pair in canonical order (match edge order)
-                if v1 < v2:
+                # Store UV pair in canonical order (always v1 < v2)
+                if is_forward:
                     uv_pairs.append((uv1, uv2))
                 else:
+                    # Reverse order to match canonical edge direction
                     uv_pairs.append((uv2, uv1))
         
-        # Check if any UV pairs differ
+        # Check if UV pairs differ
         if len(uv_pairs) >= 2:
             is_seam = False
             base_uv1, base_uv2 = uv_pairs[0]
             
             for uv1, uv2 in uv_pairs[1:]:
                 # Check if UV coordinates differ significantly
-                if (np.linalg.norm(uv1 - base_uv1) > uv_tolerance or 
-                    np.linalg.norm(uv2 - base_uv2) > uv_tolerance):
+                dist1 = np.linalg.norm(uv1 - base_uv1)
+                dist2 = np.linalg.norm(uv2 - base_uv2)
+                if dist1 > uv_tolerance or dist2 > uv_tolerance:
                     is_seam = True
                     break
             
             if is_seam:
                 seam_edges.add(edge)
+    
+    # Debug output (commented out for production, but useful for debugging)
+    # if edges_with_multiple_faces == 0:
+    #     print(f"Debug: No edges shared by multiple faces found")
+    # else:
+    #     print(f"Debug: Checked {edges_checked} edges, {edges_with_multiple_faces} shared by multiple faces, found {len(seam_edges)} seams")
+    
+    return seam_edges
+
+
+def detect_seams(mesh: trimesh.Trimesh, uv_coords: Optional[np.ndarray], 
+                 face_uv_indices: Optional[np.ndarray], 
+                 obj_path: Optional[str] = None,
+                 uv_tolerance: float = 1e-6) -> Set[Tuple[int, int]]:
+    """
+    Detect seam edges where UV mappings break.
+    
+    This function first tries to detect seams directly from the OBJ file if provided,
+    which is more reliable than using the loaded mesh (which may have merged vertices).
+    
+    Args:
+        mesh: trimesh.Trimesh object
+        uv_coords: (n_uv, 2) array of UV coordinates
+        face_uv_indices: (n_faces, 3) array of UV indices per face vertex
+        obj_path: Optional path to OBJ file for direct parsing
+        uv_tolerance: Tolerance for UV coordinate comparison
+        
+    Returns:
+        set: Set of seam edges as (v1, v2) tuples (canonical order)
+    """
+    # Try OBJ file parsing first (more reliable)
+    if obj_path and os.path.exists(obj_path):
+        try:
+            seams = detect_seams_from_obj(obj_path, uv_tolerance)
+            if len(seams) > 0:
+                return seams
+        except Exception as e:
+            print(f"Warning: Could not detect seams from OBJ file: {e}")
+    
+    # Fallback to mesh-based detection
+    if uv_coords is None or face_uv_indices is None:
+        return set()
+    
+    if len(face_uv_indices) != len(mesh.faces):
+        return set()
+    
+    # Build edge-to-faces mapping using mesh faces and UV indices
+    edge_faces = defaultdict(list)
+    
+    for face_idx, face in enumerate(mesh.faces):
+        face_uv = face_uv_indices[face_idx]
+        
+        for i in range(3):
+            v1 = face[i]
+            v2 = face[(i + 1) % 3]
+            edge = get_edge_key(v1, v2)
+            
+            uv1_idx = face_uv[i]
+            uv2_idx = face_uv[(i + 1) % 3]
+            
+            if uv1_idx >= 0 and uv2_idx >= 0:
+                edge_faces[edge].append((face_idx, uv1_idx, uv2_idx, v1 < v2))
+    
+    # Find seams
+    seam_edges = set()
+    for edge, face_data in edge_faces.items():
+        if len(face_data) < 2:
+            continue
+        
+        uv_pairs = []
+        for face_idx, uv1_idx, uv2_idx, is_forward in face_data:
+            if uv1_idx < len(uv_coords) and uv2_idx < len(uv_coords):
+                uv1 = uv_coords[uv1_idx]
+                uv2 = uv_coords[uv2_idx]
+                if is_forward:
+                    uv_pairs.append((uv1, uv2))
+                else:
+                    uv_pairs.append((uv2, uv1))
+        
+        if len(uv_pairs) >= 2:
+            base_uv1, base_uv2 = uv_pairs[0]
+            for uv1, uv2 in uv_pairs[1:]:
+                if (np.linalg.norm(uv1 - base_uv1) > uv_tolerance or 
+                    np.linalg.norm(uv2 - base_uv2) > uv_tolerance):
+                    seam_edges.add(edge)
+                    break
     
     return seam_edges
 
