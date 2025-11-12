@@ -1,7 +1,5 @@
 # Seam Tokenization Prototype - Report
 
-## Executive Summary
-
 This report presents a prototype system for tokenizing mesh seams—edges where UV texture mappings break. The system enables sequential representation of seam structures, which is a crucial step toward SeamGPT-style processing for 3D meshes. By converting seam topologies into discrete token sequences, we enable transformer-based models to understand and generate mesh seam patterns.
 
 ## Introduction
