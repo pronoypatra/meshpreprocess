@@ -1,7 +1,5 @@
 # Mesh Normalization, Quantization, and Error Analysis - Report
 
-## Executive Summary
-
 This report presents a comprehensive analysis of mesh normalization, quantization, and error measurement for 3D mesh files. The study processes 8 mesh files through two normalization methods (Min-Max and Unit Sphere), applies quantization with 1024 bins, reconstructs the meshes, and measures reconstruction errors. The results demonstrate that both normalization methods effectively preserve mesh structure with minimal information loss during quantization.
 
 ## Task 1: Load and Inspect Mesh Data
