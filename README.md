@@ -53,6 +53,7 @@ pip install -r requirements.txt
 ├── README.md                   # This file
 └── REPORT.md                   # Comprehensive analysis report
 ```
+NOTE: The files for the bonus task are explained towards the end. Not mentioned above. 
 
 ## How to Run
 
