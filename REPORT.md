@@ -78,16 +78,16 @@ Convert meshes into a standard numerical form by applying normalization and quan
 ### Comparison Analysis
 
 **Min-Max Normalization:**
-- ✅ Provides consistent [0, 1] range ideal for quantization
-- ✅ Preserves relative distances within the mesh
-- ✅ Simple and computationally efficient
-- ✅ Good for meshes with varying scales
+- Provides consistent [0, 1] range ideal for quantization
+- Preserves relative distances within the mesh
+- Simple and computationally efficient
+- Good for meshes with varying scales
 
 **Unit Sphere Normalization:**
-- ✅ Centers mesh at origin
-- ✅ Maintains mesh structure relative to center
-- ✅ Useful for rotation-invariant processing
-- ✅ Preserves overall shape and proportions
+- Centers mesh at origin
+- Maintains mesh structure relative to center
+- Useful for rotation-invariant processing
+- Preserves overall shape and proportions
 
 **Key Finding:** Both normalization methods effectively preserve mesh structure. The choice depends on specific application requirements:
 - Use **Min-Max** for applications requiring consistent range and scale preservation
@@ -262,8 +262,4 @@ Error visualizations include:
    - `output/visualizations/task3/`: Error plots and reconstructed mesh visualizations
 
 ---
-
-**Report Generated:** Mesh Normalization and Quantization Assignment  
-**Date:** 2024  
-**Author:** Assignment Implementation
 
