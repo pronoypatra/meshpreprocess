@@ -214,8 +214,4 @@ The tokenization approach transforms seam representation from geometric data to 
 
 ---
 
-**Author**: Seam Tokenization Prototype Implementation  
-**Date**: 2024  
-**Status**: Prototype Complete
-
 
