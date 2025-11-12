@@ -210,6 +210,3 @@ This work establishes the foundation for SeamGPT-style processing, enabling:
 
 The tokenization approach transforms seam representation from geometric data to sequential tokens, unlocking the power of transformer architectures for mesh processing.
 
----
-
-
